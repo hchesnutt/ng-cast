@@ -5,7 +5,7 @@ angular.module('video-player')
     templateUrl: 'src/templates/videoPlayer.html',
     
     bindings: {
-      selectedVideo: '<'
+      video: '<'
     },
     
     controller: function() {

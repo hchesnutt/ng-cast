@@ -3,6 +3,7 @@ angular.module('video-player')
     templateUrl: `src/templates/videoList.html`,
     
     bindings: {
-      videos: '<' 
+      videos: '<',
+      onClick: '<' 
     }
   });
