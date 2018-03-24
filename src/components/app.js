@@ -1,14 +1,14 @@
 angular.module('video-player')
 
-.component('app', {
+  .component('app', {
   
-  controller: function() {
+    controller: function() {
     
-    this.videos = window.exampleVideoData;
-    this.selectedVideo = window.exampleVideoData[0];
-    
-    console.log(this);
-  },
+      this.videos = window.exampleVideoData;
+      this.selectedVideo = window.exampleVideoData[0];
+      
+      console.log(this);
+    },
   
-  templateUrl: 'src/templates/app.html'
-});
+    templateUrl: 'src/templates/app.html'
+  });
