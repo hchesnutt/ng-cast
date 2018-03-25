@@ -3,16 +3,25 @@ angular.module('video-player')
   .component('app', {
   
     controller: function(youTube) {
-      console.log(youTube);
+      // Init state variables
       this.videos = window.exampleVideoData;
       this.selectedVideo = window.exampleVideoData[0];
+      this.initQuery = 'Hack Reactor';
+      
+      // methods
+      this.search = youTube.search;
       this.selectVideo = video => this.selectedVideo = video;
-      this.searchYoutube = youTube;
-      console.log(youTube);
+      this.result = videos => {
+        this.videos = videos;
+        this.selectedVideo = videos[0];
+      };
+      // on Init
+      this.search(this.initQuery, this.result);
     },
   
     templateUrl: 'src/templates/app.html'
   });
+
 
 
 
